@@ -1,0 +1,21 @@
+{
+  "Name": "BattleBot",
+
+  "Class": "Destroyer",
+
+  "LeftHandWeapon": {
+    "Name": "LaserRifle",
+    "Damage": 5,
+    "Speed": 15,
+    "Range": 10,
+    "Weight": 5
+  },
+
+  "RightHandWeapon": {
+    "Name": "Cannon",
+    "Damage": 10,
+    "Speed": 10,
+    "Range": 15,
+    "Weight": 10
+  }
+}
