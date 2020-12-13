@@ -29,4 +29,7 @@ public:
 	UFUNCTION(BlueprintCallable)
 	FString ParseToString(FString path);
 
+	UFUNCTION(BlueprintCallable)
+		void WriteToFile(FString text, FString filepath);
+
 };

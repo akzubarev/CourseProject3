@@ -11,10 +11,10 @@
 	},
 	"RightHandWeapon":
 	{
-		"Name": "Missile",
-		"Damage": 20,
-		"Speed": 5,
-		"Range": 30,
-		"Weight": 20
+		"Name": "Cannon",
+		"Damage": 10,
+		"Speed": 10,
+		"Range": 15,
+		"Weight": 10
 	}
 }

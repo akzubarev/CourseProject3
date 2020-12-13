@@ -74,4 +74,11 @@ FString AJsonParser::ParseToString(FString path)
 	*/
 }
 
+void AJsonParser::WriteToFile(FString text, FString filepath) {
+
+	const FString fullpath = FPaths::ProjectContentDir() + filepath;
+	FFileHelper::SaveStringToFile(text, *fullpath);//, FFileHelper::EEncodingOptions::AutoDetect, &IFileManager::Get(), EFileWrite::FILEWRITE_Append);
+		
+}
+
 
