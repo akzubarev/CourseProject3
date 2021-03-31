@@ -1,20 +1,20 @@
 {
-	"Name": "BattleBot",
+	"Name": "Megatron",
 	"Class": "Destroyer",
-	"LeftHandWeapon":
-	{
-		"Name": "LaserRifle",
-		"Damage": 5,
-		"Speed": 15,
-		"Range": 10,
-		"Weight": 5
-	},
-	"RightHandWeapon":
-	{
-		"Name": "Missile",
-		"Damage": 20,
-		"Speed": 5,
-		"Range": 30,
-		"Weight": 20
-	}
+	"LeftHand":  {
+      "Name": "Normal",
+      "Damage": 5,
+      "Speed": 15,
+      "Range": 10,
+      "Weight": 5
+    },
+	"RightHand": 
+    {
+      "Name": "Stone",
+      "Damage": 20,
+      "Speed": 5,
+      "Range": 30,
+      "Weight": 20
+    }
+	
 }
