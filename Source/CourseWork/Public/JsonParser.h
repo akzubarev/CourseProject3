@@ -31,5 +31,8 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 		void WriteToFile(FString text, FString filepath);
+	
+	UFUNCTION(BlueprintCallable)
+		FORCEINLINE USkeletalMesh* LoadSkMeshFromPath(FString Path);
 
 };

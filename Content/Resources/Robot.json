@@ -1,20 +1,42 @@
 {
-	"Name": "Megatron",
-	"Class": "Destroyer",
-	"LeftHand":  {
-      "Name": "Normal",
-      "Damage": 5,
-      "Speed": 15,
-      "Range": 10,
-      "Weight": 5
-    },
-	"RightHand": 
-    {
-      "Name": "Stone",
-      "Damage": 20,
-      "Speed": 5,
-      "Range": 30,
-      "Weight": 20
-    }
-	
+  "Name": "Megatron",
+  "Class": "Destroyer",
+  "Left Hand": {
+    "Name": "Normal",
+    "Damage": 5,
+    "Speed": 15,
+    "Range": 10,
+    "Weight": 5
+  },
+  "Right Hand": {
+    "Name": "White",
+    "Damage": 20,
+    "Speed": 5,
+    "Range": 30,
+    "Weight": 20
+  },
+  "Left Leg": {
+    "Name": "Normal",
+    "Damage": 5,
+    "Speed": 15,
+    "Range": 10,
+    "Weight": 5
+  },
+  "Right Leg": {
+    "Name": "White",
+    "Damage": 20,
+    "Speed": 5,
+    "Range": 30,
+    "Weight": 20
+  },
+
+  "Body": {
+    "Name": "White",
+    "Defence": 5
+  },
+
+  "Head": {
+    "Name": "White",
+    "Defence": 5
+  }
 }

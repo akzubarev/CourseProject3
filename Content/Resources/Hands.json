@@ -1,0 +1,18 @@
+{
+  "Types": [
+    {
+      "Name": "Normal",
+      "Damage": 5,
+      "Speed": 15,
+      "Range": 10,
+      "Weight": 5
+    },
+    {
+      "Name": "White",
+      "Damage": 20,
+      "Speed": 5,
+      "Range": 30,
+      "Weight": 20
+    }
+  ]
+}

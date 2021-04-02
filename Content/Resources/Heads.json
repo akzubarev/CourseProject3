@@ -1,0 +1,12 @@
+{
+  "Types": [
+    {
+      "Name": "Normal",
+      "Defence": 5
+    },
+    {
+      "Name": "White",
+      "Defence": 5
+    }
+  ]
+}
