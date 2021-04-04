@@ -2,11 +2,11 @@
   "Types": [
     {
       "Name": "Normal",
-      "Defence": 5
+      "Armour": 5
     },
     {
       "Name": "White",
-      "Defence": 5
+      "Armour": 5
     }
   ]
 }

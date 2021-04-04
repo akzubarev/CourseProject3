@@ -32,11 +32,11 @@
 
   "Body": {
     "Name": "White",
-    "Defence": 5
+    "Armour": 5
   },
 
   "Head": {
     "Name": "White",
-    "Defence": 5
+    "Armour": 5
   }
 }

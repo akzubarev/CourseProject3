@@ -1,0 +1,54 @@
+{
+  "Hand": [
+    {
+      "Name": "Normal",
+      "Damage": 5,
+      "Speed": 15,
+      "Range": 10,
+      "Weight": 5
+    },
+    {
+      "Name": "White",
+      "Damage": 20,
+      "Speed": 5,
+      "Range": 30,
+      "Weight": 20
+    }
+  ],
+  "Leg": [
+    {
+      "Name": "Normal",
+      "Damage": 5,
+      "Speed": 15,
+      "Range": 10,
+      "Weight": 5
+    },
+    {
+      "Name": "White",
+      "Damage": 20,
+      "Speed": 5,
+      "Range": 30,
+      "Weight": 20
+    }
+  ],
+  "Body": [
+    {
+      "Name": "Normal",
+      "Armour": 5
+    },
+    {
+      "Name": "White",
+      "Armour": 5
+    }
+  ],
+  "Head": [
+    {
+      "Name": "Normal",
+      "Armour": 5
+    },
+    {
+      "Name": "White",
+      "Armour": 5
+    }
+  ]
+}

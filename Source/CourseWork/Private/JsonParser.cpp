@@ -86,4 +86,130 @@ USkeletalMesh* AJsonParser::LoadSkMeshFromPath(FString Path)
 	return Cast<USkeletalMesh>(StaticLoadObject(USkeletalMesh::StaticClass(), NULL, *Path));
 }
 
+/*
+TMap<FString, FString> AJsonParser::GetPartsFieldsByType(FString type)
+{
+	return *fieldsDict.Find(type);
+}
 
+TArray<FString> AJsonParser::GetPartsFieldsKeys()
+{
+	//return fieldsDict.GetKeys();   //TMap has no fuction for keys???
+	TArray<FString> res;
+	for (auto elem : fieldsDict)
+		res.Add(elem.Key);
+	return res;
+}
+*/
+
+void mylog(FString text)
+{
+	UE_LOG(LogTemp, Warning, TEXT("%s"), *text);
+}
+
+
+void mylog(int num)
+{
+	FString text = FString::FromInt(num);
+	UE_LOG(LogTemp, Warning, TEXT("%s"), *text);
+}
+
+
+int findPartEnd(FString text)
+{
+	int opened = 0;
+	for (int i = 0; i < text.Len(); i++)
+	{
+		if (text[i] == '{')
+			opened++;
+		if (text[i] == '}')
+			if (opened > 1)
+				opened--;
+			else
+				return i;
+
+	}
+	return -1;
+}
+
+void AJsonParser::ReadSchema(FString Path, TMap<FString, FString>& Robot,
+	TMap<FString, FString>& Hands, TMap<FString, FString>& Legs,
+	TMap<FString, FString>& Bodies, TMap<FString, FString>& Heads)
+{
+	FString schema = AJsonParser::ParseToString(Path);
+	FString part = "", name = "", type = "";
+	int idxtocut = schema.Find(TEXT("defs")) + 5;
+	schema = schema.RightChop(idxtocut);
+	idxtocut = schema.Find("{");
+	bool readRobot = false;
+	int count = 0;
+
+	while (!readRobot)
+	{
+		schema = schema.RightChop(idxtocut + 1);
+
+		idxtocut = findPartEnd(schema) + 2;
+		FString toanalyze = schema.Mid(0, idxtocut);
+		//mylog(toanalyze);
+
+		int start = toanalyze.Find("\"");
+		int end = toanalyze.Find("\"", ESearchCase::IgnoreCase, ESearchDir::FromStart, start + 1);
+		part = toanalyze.Mid(start + 1, (end - 1) - (start + 1) + 1);
+		//mylog("Part: " + part);
+
+		toanalyze = toanalyze.RightChop(end + 1);
+		TMap<FString, FString> fields;
+		bool readPart = false;
+		end = -1;
+
+		while (!readPart) {
+			start = toanalyze.Find("\"", ESearchCase::IgnoreCase, ESearchDir::FromStart, end + 1);
+			if (start < 0)
+			{
+				readPart = true;
+				break;
+			}
+
+			end = toanalyze.Find("\"", ESearchCase::IgnoreCase, ESearchDir::FromStart, start + 1);
+			name = toanalyze.Mid(start + 1, (end - 1) - (start + 1) + 1);
+
+			int refidx = toanalyze.Find("ref", ESearchCase::IgnoreCase, ESearchDir::FromStart, end + 1);
+			int typeidx = toanalyze.Find("type", ESearchCase::IgnoreCase, ESearchDir::FromStart, end + 1);
+			if ((refidx > typeidx || refidx == -1)
+				&& typeidx != -1)
+				start = typeidx + 5;
+			else
+				start = refidx + 4;
+
+			start = toanalyze.Find("\"", ESearchCase::IgnoreCase, ESearchDir::FromStart, start);
+			end = toanalyze.Find("\"", ESearchCase::IgnoreCase, ESearchDir::FromStart, start + 1);
+
+			type = toanalyze.Mid(start + 1, (end - 1) - (start + 1) + 1);
+
+			if (type.Contains("#"))
+				type = TEXT("part");
+
+			//mylog(name + ": " + type);
+			fields.Add(name, type);
+		}
+
+
+
+		//fieldsDict.Add(part, fields);
+
+		// there is no c++ switch for string types in ue4
+		if (part == "Hand")
+			Hands = fields;
+		else if (part == "Leg")
+			Legs = fields;
+		else if (part == "Body")
+			Bodies = fields;
+		else if (part == "Head")
+			Heads = fields;
+		else if (part == "Robot")
+		{
+			Robot = fields;
+			readRobot = true;
+		}
+	}
+}

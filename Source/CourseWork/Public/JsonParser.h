@@ -10,8 +10,8 @@ UCLASS()
 class COURSEWORK_API AJsonParser : public AActor
 {
 	GENERATED_BODY()
-	
-public:	
+
+public:
 	// Sets default values for this actor's properties
 	AJsonParser();
 
@@ -19,20 +19,32 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-//	UPROPERTY(BlueprintReadOnly, Category = "JsonParser")
-//		FString jsonstring;
+	//TMap<FString, TMap<FString, FString>> fieldsDict;
 
-public:	
+	//	UPROPERTY(BlueprintReadOnly, Category = "JsonParser")
+	//		FString jsonstring;
+
+public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
 	UFUNCTION(BlueprintCallable)
-	FString ParseToString(FString path);
+		FString ParseToString(FString path);
 
 	UFUNCTION(BlueprintCallable)
 		void WriteToFile(FString text, FString filepath);
-	
+
 	UFUNCTION(BlueprintCallable)
 		FORCEINLINE USkeletalMesh* LoadSkMeshFromPath(FString Path);
+	/*
+	UFUNCTION(BlueprintCallable)
+		TMap<FString, FString> GetPartsFieldsByType(FString type);
+
+	UFUNCTION(BlueprintCallable)
+		TArray<FString> GetPartsFieldsKeys();
+	*/
+
+	UFUNCTION(BlueprintCallable)
+		void ReadSchema(FString Path, TMap<FString, FString>& Robot, TMap<FString, FString>& Hands, TMap<FString, FString>& Legs, TMap<FString, FString>& Bodies, TMap<FString, FString>& Heads);
 
 };
