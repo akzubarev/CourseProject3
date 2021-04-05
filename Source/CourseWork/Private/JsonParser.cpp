@@ -198,13 +198,13 @@ void AJsonParser::ReadSchema(FString Path, TMap<FString, FString>& Robot,
 		//fieldsDict.Add(part, fields);
 
 		// there is no c++ switch for string types in ue4
-		if (part == "Hand")
+		if (part == "Combat")
 			Hands = fields;
-		else if (part == "Leg")
+		else if (part == "Movement")
 			Legs = fields;
-		else if (part == "Body")
+		else if (part == "Armour")
 			Bodies = fields;
-		else if (part == "Head")
+		else if (part == "Basis")
 			Heads = fields;
 		else if (part == "Robot")
 		{

@@ -1,0 +1,40 @@
+{
+  "$schema": "{link}",
+  "$id": "{link}",
+  "description": "Robot",
+
+  "$defs": {
+    "Hand": {
+      "Name": { "type": "string" },
+      "Damage": { "type": "int" },
+      "Speed": { "type": "int" },
+      "Range": { "type": "int" },
+      "Weight": { "type": "int" }
+    },
+    "Leg": {
+      "Name": { "type": "string" },
+      "Damage": { "type": "int" },
+      "Speed": { "type": "int" },
+      "Range": { "type": "int" },
+      "Weight": { "type": "int" }
+    },
+    "Head": {
+      "Name": { "type": "string" },
+      "Armour": { "type": "int" }
+    },
+    "Body": {
+      "Name": { "type": "string" },
+      "Armour": { "type": "int" }
+    },
+    "Robot": {
+      "Name": { "type": "string" },
+      "Class": { "type": "string" },
+      "Left Hand": { "$ref": "#/$defs/Hand" },
+      "Right Hand": { "$ref": "#/$defs/Hand" },
+      "Left Leg": { "$ref": "#/$defs/Leg" },
+      "Right Leg": { "$ref": "#/$defs/Leg" },
+      "Body": { "$ref": "#/$defs/Body" },
+      "Head": { "$ref": "#/$defs/Head" }
+    }
+  }
+}

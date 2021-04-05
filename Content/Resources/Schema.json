@@ -4,37 +4,67 @@
   "description": "Robot",
 
   "$defs": {
-    "Hand": {
-      "Name": { "type": "string" },
-      "Damage": { "type": "int" },
-      "Speed": { "type": "int" },
+    "Basis": {
+      "Type": { "type": "string" },
+      "id": { "type": "int" },
+      "LocationX": { "type": "float" },
+      "LocationY": { "type": "float" },
+      "LocationZ": { "type": "float" },
+      "Wear": { "type": "float" },
+      "Weight": { "type": "float" }
+    },
+
+    "Armour": {
+      "Type": { "type": "string" },
+      "id": { "type": "int" },
+      "LocationX": { "type": "float" },
+      "LocationY": { "type": "float" },
+      "LocationZ": { "type": "float" },
+      "Wear": { "type": "float" },
+      "Weight": { "type": "float" }
+    },
+
+    "Combat": {
+      "Type": { "type": "string" },
+      "id": { "type": "int" },
+      "LocationX": { "type": "float" },
+      "LocationY": { "type": "float" },
+      "LocationZ": { "type": "float" },
+      "Wear": { "type": "float" },
+      "Weight": { "type": "float" },
+      "Damage": { "type": "float" },
       "Range": { "type": "int" },
-      "Weight": { "type": "int" }
+      "Speed": { "type": "float" }
     },
-    "Leg": {
-      "Name": { "type": "string" },
-      "Damage": { "type": "int" },
-      "Speed": { "type": "int" },
-      "Range": { "type": "int" },
-      "Weight": { "type": "int" }
+
+    "Movement": {
+      "Type": { "type": "string" },
+      "id": { "type": "int" },
+      "LocationX": { "type": "float" },
+      "LocationY": { "type": "float" },
+      "LocationZ": { "type": "float" },
+      "Wear": { "type": "float" },
+      "Weight": { "type": "float" },
+      "Damage": { "type": "float" },
+      "Lifting": { "type": "float" },
+      "Speed": { "type": "float" }
     },
-    "Head": {
-      "Name": { "type": "string" },
-      "Armour": { "type": "int" }
-    },
-    "Body": {
-      "Name": { "type": "string" },
-      "Armour": { "type": "int" }
-    },
+
     "Robot": {
-      "Name": { "type": "string" },
-      "Class": { "type": "string" },
-      "Left Hand": { "$ref": "#/$defs/Hand" },
-      "Right Hand": { "$ref": "#/$defs/Hand" },
-      "Left Leg": { "$ref": "#/$defs/Leg" },
-      "Right Leg": { "$ref": "#/$defs/Leg" },
-      "Body": { "$ref": "#/$defs/Body" },
-      "Head": { "$ref": "#/$defs/Head" }
+      "id": { "type": "int" },
+      "Charge": { "type": "float" },
+      "Mmr": { "type": "int" },
+      "Speed": { "type": "float" },
+      "Status": { "type": "int" },
+      "Tiredness": { "type": "float" },
+      "Wear": { "type": "float" },
+      "Weight": { "type": "float" },
+      "Left Hand": { "$ref": "#/$defs/Combat" },
+      "Right Hand": { "$ref": "#/$defs/Combat" },
+      "Left Leg": { "$ref": "#/$defs/Movement" },
+      "Right Leg": { "$ref": "#/$defs/Movement" },
+      "Body": { "$ref": "#/$defs/Armour" },
+      "Head": { "$ref": "#/$defs/Basis" }
     }
   }
 }
