@@ -81,10 +81,12 @@ void AJsonParser::WriteToFile(FString text, FString filepath) {
 
 }
 
+/*
 USkeletalMesh* AJsonParser::LoadSkMeshFromPath(FString Path)
 {
 	return Cast<USkeletalMesh>(StaticLoadObject(USkeletalMesh::StaticClass(), NULL, *Path));
 }
+*/
 
 /*
 TMap<FString, FString> AJsonParser::GetPartsFieldsByType(FString type)

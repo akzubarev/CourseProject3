@@ -35,7 +35,11 @@ public:
 		void WriteToFile(FString text, FString filepath);
 
 	UFUNCTION(BlueprintCallable)
-		FORCEINLINE USkeletalMesh* LoadSkMeshFromPath(FString Path);
+		FORCEINLINE USkeletalMesh* LoadSkMeshFromPath(FString Path)
+	{
+		return Cast<USkeletalMesh>(StaticLoadObject(USkeletalMesh::StaticClass(), NULL, *Path));
+	}
+
 	/*
 	UFUNCTION(BlueprintCallable)
 		TMap<FString, FString> GetPartsFieldsByType(FString type);
