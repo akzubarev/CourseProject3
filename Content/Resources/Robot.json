@@ -1,37 +1,37 @@
 {
-	"id": 0,
-	"Charge": 212.39999389648438,
-	"Mmr": 500,
-	"Speed": 11.800000190734863,
-	"Status": 1,
-	"Tiredness": 10.199999809265137,
-	"Wear": 23,
-	"Weight": 9.1999998092651367,
+	"id": 4,
+	"Charge": 2.0216987133026123,
+	"Mmr": 5,
+	"Speed": 8.8000001907348633,
+	"Status": 0,
+	"Tiredness": 2.9131441116333008,
+	"Wear": 20,
+	"Weight": 12.199999809265137,
 	"Left Hand":
 	{
-		"Type": "White",
-		"id": 1,
-		"LocationX": 1.1000000238418579,
-		"LocationY": 1.2000000476837158,
-		"LocationZ": 1.2999999523162842,
-		"Wear": 4.5,
-		"Weight": 1.2000000476837158,
-		"Damage": 9.5,
-		"Range": 7,
-		"Speed": 3.2000000476837158
+		"Type": "Normal",
+		"id": 0,
+		"LocationX": 1.5,
+		"LocationY": 1.6000000238418579,
+		"LocationZ": 1.7000000476837158,
+		"Wear": 3.5,
+		"Weight": 2.2000000476837158,
+		"Damage": 10.199999809265137,
+		"Range": 6,
+		"Speed": 2.2000000476837158
 	},
 	"Right Hand":
 	{
-		"Type": "White",
-		"id": 1,
-		"LocationX": 1.1000000238418579,
-		"LocationY": 1.2000000476837158,
-		"LocationZ": 1.2999999523162842,
-		"Wear": 4.5,
-		"Weight": 1.2000000476837158,
-		"Damage": 9.5,
-		"Range": 7,
-		"Speed": 3.2000000476837158
+		"Type": "Normal",
+		"id": 0,
+		"LocationX": 1.5,
+		"LocationY": 1.6000000238418579,
+		"LocationZ": 1.7000000476837158,
+		"Wear": 3.5,
+		"Weight": 2.2000000476837158,
+		"Damage": 10.199999809265137,
+		"Range": 6,
+		"Speed": 2.2000000476837158
 	},
 	"Left Leg":
 	{
@@ -48,23 +48,23 @@
 	},
 	"Right Leg":
 	{
-		"Type": "White",
-		"id": 1,
-		"LocationX": 1.1000000238418579,
-		"LocationY": 1.2000000476837158,
-		"LocationZ": 1.2999999523162842,
-		"Wear": 4.5,
-		"Weight": 1.2000000476837158,
-		"Damage": 9.5,
-		"Lifting": 4.5,
-		"Speed": 3.2000000476837158
+		"Type": "Normal",
+		"id": 0,
+		"LocationX": 1.5,
+		"LocationY": 1.6000000238418579,
+		"LocationZ": 1.7000000476837158,
+		"Wear": 3.5,
+		"Weight": 2.2000000476837158,
+		"Damage": 10.199999809265137,
+		"Lifting": 6,
+		"Speed": 2.2000000476837158
 	},
 	"Body":
 	{
 		"Type": "Normal",
 		"id": 0,
 		"LocationX": 1.5,
-		"LocationY": 1.5,
+		"LocationY": 1.6000000238418579,
 		"LocationZ": 1.7000000476837158,
 		"Wear": 2.5,
 		"Weight": 1.2000000476837158
